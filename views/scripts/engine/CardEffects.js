@@ -18,6 +18,21 @@ function close (player, opponent, amount){
 	}
 }
 
+function advance (player, opponent, amount){
+	var direction = 0;
+	var leap = 1;
+	if (player.position < opponent.position){
+		direction = 1;
+	} else {
+		direction = -1;
+	}
+	for (let i = 0; i < amount; i++){
+		if (player.position < opponent.position - 1 || player.position > opponent.position + 1){
+			player.position += direction;
+		}
+	}
+}
+
 function retreat (player, opponent, amount){
 	var direction = 0;
 	if (player.position < opponent.position){

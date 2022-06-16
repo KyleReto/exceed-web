@@ -11,7 +11,7 @@ $(document).ready(function(){
     );
     RENDERER.render(testState);
 	console.log(testState);
-    retreat(testState.p1, testState.p2, 8);
+    advance(testState.p1, testState.p2, 8);
     RENDERER.render(testState);
 	console.log(testState);
 });

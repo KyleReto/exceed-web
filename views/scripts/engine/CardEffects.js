@@ -2,7 +2,11 @@ function draw (player, amount){
     for (let i = 0; i < amount; i++){
         player.hand.push(player.deck.pop());
     }
-} 
+}
+
+function boost(player, card){
+	player.boost.push(player.hand.splice(0, 1, card)[0]);
+}
 
 function close (player, opponent, amount){
 	var direction = 0;

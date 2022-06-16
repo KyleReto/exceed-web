@@ -17,3 +17,17 @@ function close (player, opponent, amount){
 		}
 	}
 }
+
+function retreat (player, opponent, amount){
+	var direction = 0;
+	if (player.position < opponent.position){
+		direction = -1;
+	} else {
+		direction = 1;
+	}
+	for (let i = 0; i < amount; i++){
+		if (player.position != 0 || player.position != 8){
+			player.position += direction;
+		}
+	}
+}

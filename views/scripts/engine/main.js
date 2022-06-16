@@ -12,6 +12,6 @@ $(document).ready(function(){
         null
     );
     RENDERER.render(testState);
-    close(testState.p1, testState.p2, 8);
+    retreat(testState.p1, testState.p2, 8);
     RENDERER.render(testState);
 });

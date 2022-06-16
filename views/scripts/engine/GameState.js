@@ -13,6 +13,7 @@ class Player{
         this.position = position;
         this.isExceed = false;
         this.hasReshuffled = false;
+        this.strike = null;
         this.sealed = [];
         this.hand = [];
         this.gauge = [];

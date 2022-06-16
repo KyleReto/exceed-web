@@ -18,6 +18,7 @@ class Player{
         this.gauge = [];
         this.deck = deck;
         this.discard = [];
+        this.boosts = [];
     }
 }
 

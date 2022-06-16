@@ -30,13 +30,13 @@ function advance (player, opponent, amount){
 		leap = -1;
 	}
 	for (let i = 0; i < amount; i++){
-		if (player.position == opponent.position - 1 || player.position == opponent.position + 1){
+		if ((player.position == opponent.position - 1 && leap == 1) || (player.position == opponent.position + 1 && leap == -1)){
 			leap *= 2;
 		}
 		if (player.position + leap >= 0 && player.position + leap <= 8){
 			player.position += leap;
 		}
-		if (Math.abs(leap) = 2) leap /= 2;
+		if (Math.abs(leap) == 2) leap /= 2;
 	}
 }
 

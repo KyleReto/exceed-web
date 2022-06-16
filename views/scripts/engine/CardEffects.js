@@ -5,7 +5,20 @@ function draw (player, amount){
 }
 
 function moveCard(card, from, to){
-	to.push(from.splice(0, 1, card)[0]);
+	//to.push(from.splice(0, 1, card)[0]);
+	to.push(card);							//Put the card in the new area
+	for (let i = 0; i < from.length; i++){	//Delete the card from the old area
+		if (from[i] === card){
+			from.splice(i, 1);
+			break;
+		}
+	}
+}
+
+function discardRandom(player){
+	if(player.hand.length > 0){
+		moveCard(player.hand[Math.floor(Math.random() * player.hand.length)], player.hand, player.discard);
+	}
 }
 
 function close (player, opponent, amount){
@@ -53,3 +66,4 @@ function retreat (player, opponent, amount){
 		}
 	}
 }
+

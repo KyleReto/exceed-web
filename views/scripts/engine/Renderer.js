@@ -1,7 +1,7 @@
 class Renderer{
 
     render(state){
-        $('#board').append('<span>' + state.p1.character.name + ' vs ' + 
+        $('#board').append('</br><span>' + state.p1.character.name + ' vs ' + 
         state.p2.character.name +'</span>');
         for (let i = 0; i < 9; i++){
             let appendStr = '<div>' + i + ': ';

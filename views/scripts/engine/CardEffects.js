@@ -26,7 +26,7 @@ function retreat (player, opponent, amount){
 		direction = 1;
 	}
 	for (let i = 0; i < amount; i++){
-		if (player.position != 0 || player.position != 8){
+		if (player.position > 0 && player.position < 8){
 			player.position += direction;
 		}
 	}

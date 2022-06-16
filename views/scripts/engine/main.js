@@ -11,6 +11,6 @@ $(document).ready(function(){
         null
     );
     console.log(testState);
-    draw(testState.p1, 2);
+    close(testState.p1, testState.p2, 8);
     console.log(testState);
 });

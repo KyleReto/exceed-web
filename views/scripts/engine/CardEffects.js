@@ -23,17 +23,20 @@ function close (player, opponent, amount){
 }
 
 function advance (player, opponent, amount){
-	var direction = 0;
-	var leap = 1;
+	var leap = 0;
 	if (player.position < opponent.position){
-		direction = 1;
+		leap = 1;
 	} else {
-		direction = -1;
+		leap = -1;
 	}
 	for (let i = 0; i < amount; i++){
-		if (player.position < opponent.position - 1 || player.position > opponent.position + 1){
-			player.position += direction;
+		if (player.position == opponent.position - 1 || player.position == opponent.position + 1){
+			leap *= 2;
 		}
+		if (player.position + leap >= 0 && player.position + leap <= 8){
+			player.position += leap;
+		}
+		if (Math.abs(leap) = 2) leap /= 2;
 	}
 }
 

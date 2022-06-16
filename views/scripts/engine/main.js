@@ -1,5 +1,6 @@
 // On page load
 $(document).ready(function(){
+    const RENDERER = new Renderer();
     let testNormal = new Card('Dive', 'Before: Advance 3. If you moved past the opponent, their attacks do not hit you.',
          CardType.Normal);
     let testCharacter1 = new Card('Ryu', 'As an action, you may Move 1', CardType.Character);
@@ -10,7 +11,7 @@ $(document).ready(function(){
         new Player(testCharacter2, 6, [testNormal, testNormal, testNormal]),
         null
     );
-    console.log(testState);
+    RENDERER.render(testState);
     close(testState.p1, testState.p2, 8);
-    console.log(testState);
+    RENDERER.render(testState);
 });

@@ -23,13 +23,13 @@ class Player{
 }
 
 class Card{
-    constructor(name, mainText, type,
-             owner = null, secondText = '', mainCost = null, secondCost = null, stats = null){
+    constructor(name, type, mainEffect = null, 
+             owner = null, secondEffect = null, mainCost = null, secondCost = null, stats = null){
         this.name = name;
         this.owner = owner;
-        this.mainText = mainText;
+        this.mainEffect = mainEffect;
         this.type = type;
-        this.secondText = secondText;
+        this.secondEffect = secondEffect;
         this.mainCost = mainCost;
         this.secondCost = secondCost;
         this.stats = stats;

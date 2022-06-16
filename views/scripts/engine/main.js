@@ -12,6 +12,8 @@ $(document).ready(function(){
         null
     );
     RENDERER.render(testState);
+	console.log(testState);
     retreat(testState.p1, testState.p2, 8);
     RENDERER.render(testState);
+	console.log(testState);
 });

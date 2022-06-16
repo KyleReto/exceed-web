@@ -4,8 +4,8 @@ function draw (player, amount){
     }
 }
 
-function boost(player, card){
-	player.boost.push(player.hand.splice(0, 1, card)[0]);
+function moveCard(card, from, to){
+	to.push(from.splice(0, 1, card)[0]);
 }
 
 function close (player, opponent, amount){

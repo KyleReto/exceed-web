@@ -11,7 +11,7 @@ $(document).ready(function(){
     );
     RENDERER.render(testState);
 	console.log(testState);
-    advance(testState.p1, testState.p2, 8);
+    moveCard(testState.p1.deck[0], testState.p1.deck, testState.p1.gauge);
     RENDERER.render(testState);
 	console.log(testState);
 });
